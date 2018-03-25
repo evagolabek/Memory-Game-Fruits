@@ -7,6 +7,10 @@ import {createGame} from '../actions/game'
 
 export class Board extends PureComponent {
 
+  componentWillMount() {
+    this.handleClick()
+  }
+
 renderRow = (row, rowIndex) => {
     return (
       <div key={rowIndex} className="row">
