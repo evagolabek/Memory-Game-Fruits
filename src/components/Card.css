@@ -1,7 +1,7 @@
 .Card {
   flex: 1;
   /* border: 1px solid blue; */
-  background-color: yellow;
+  margin: 10px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;

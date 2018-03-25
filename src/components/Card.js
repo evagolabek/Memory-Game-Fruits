@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './Card.css'
 import { connect } from 'react-redux'
+import {flipCard} from '../actions/game'
 
 
 export class Card extends PureComponent {
@@ -13,8 +14,9 @@ export class Card extends PureComponent {
   }
 
   handleClick = () => {
-    const {row, col} = this.props
-
+    const {row, col, visible, flipCard} = this.props
+    if (visible) return
+    flipCard(row, col)
 }
 
   makeClassName = () => {
@@ -39,4 +41,4 @@ export class Card extends PureComponent {
 
 const mapStateToProps = null
 
-export default connect(mapStateToProps)(Card)
+export default connect(mapStateToProps, {flipCard})(Card)

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Card from '../components/Card'
 import './Board.css'
 import { connect } from 'react-redux'
+import {createGame} from '../actions/game'
 
 
 export class Board extends PureComponent {
@@ -29,10 +30,17 @@ renderCard = rowIndex => (value, colIndex) => {
   )
 }
 
+handleClick = () => {
+  this.props.createGame(4,4)
+}
+
 render() {
   return(
-    <div className="Board">
-    {this.props.cardMap.map(this.renderRow)}
+    <div className = "Page">
+      <button onClick = {this.handleClick}>create game</button>
+      <div className="Board">
+        {this.props.cardMap.map(this.renderRow)}
+      </div>
     </div>
   )
 }
@@ -45,4 +53,4 @@ const mapStateToProps = (reduxState) => {
     flipMap: reduxState.flipMap,
   }
 }
-export default connect(mapStateToProps)(Board)
+export default connect(mapStateToProps, {createGame})(Board)
