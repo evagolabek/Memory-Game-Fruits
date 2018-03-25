@@ -4,21 +4,24 @@ import './Card.css'
 import { connect } from 'react-redux'
 
 
-class Card extends PureComponent {
+export class Card extends PureComponent {
   static propTypes = {
     value: PropTypes.number.isRequired,
     row: PropTypes.number.isRequired,
     col: PropTypes.number.isRequired,
+    visible: PropTypes.bool.isRequired,
   }
 
   handleClick = () => {
     const {row, col} = this.props
+
 }
 
   makeClassName = () => {
-    const {value} = this.props
+    const {value, visible} = this.props
     let classNameArray = ['Card']
-    classNameArray.push(`value${value || 0}`)
+    if (visible) classNameArray.push(`image-${value}`)
+
     return classNameArray.join(' ')
   }
 
@@ -34,6 +37,6 @@ class Card extends PureComponent {
   }
 }
 
-mapStateToProps = null
+const mapStateToProps = null
 
-export default connect(mapStateToProps, { addBoatSquareP1, addBoatSquareP2 })(Square)
+export default connect(mapStateToProps)(Card)

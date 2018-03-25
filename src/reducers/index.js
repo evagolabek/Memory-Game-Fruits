@@ -1,5 +1,7 @@
-import table from './table.js'
+import cardMap from './cardMap'
+import flipMap from './flipMap'
 
 export default {
-table,
+cardMap,
+flipMap,
 }

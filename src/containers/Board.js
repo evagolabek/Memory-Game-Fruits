@@ -15,12 +15,16 @@ renderRow = (row, rowIndex) => {
   }
 
 renderCard = rowIndex => (value, colIndex) => {
+  const { flipMap } = this.props
+
+  let visible = flipMap[rowIndex][colIndex] > 0 ? true : false
+
   return (
     <Card
-    key={colIndex}
     value={value}
     row={rowIndex}
     col={colIndex}
+    visible={visible}
     />
   )
 }
@@ -28,7 +32,7 @@ renderCard = rowIndex => (value, colIndex) => {
 render() {
   return(
     <div className="Board">
-    {this.props.table.map(this.renderRow)}
+    {this.props.cardMap.map(this.renderRow)}
     </div>
   )
 }
@@ -37,7 +41,8 @@ render() {
 
 const mapStateToProps = (reduxState) => {
   return {
-    table: reduxState.table
+    cardMap: reduxState.cardMap,
+    flipMap: reduxState.flipMap,
   }
 }
 export default connect(mapStateToProps)(Board)

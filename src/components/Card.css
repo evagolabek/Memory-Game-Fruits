@@ -1,11 +1,55 @@
 .Card {
   flex: 1;
-  min-width: 40px;
-  max-width: 40px;
-  min-height: 40px;
-  max-height: 40px;
-  border: 2px solid #007399;
-  transition: all ease-in-out .6s;
-  cursor: pointer;
-  background-color: #0099cc;
+  /* border: 1px solid blue; */
+  background-color: yellow;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/card.svg);
+}
+
+.image-1 {
+  background-image: url(../images/fruits/apple.jpg);
+}
+.image-2 {
+  background-image: url(../images/fruits/fig.jpg);
+}
+.image-3 {
+  background-image: url(../images/fruits/grape.jpg);
+}
+.image-4 {
+  background-image: url(../images/fruits/kiwi.jpg);
+}
+.image-5 {
+  background-image: url(../images/fruits/lemon.jpg);
+}
+.image-6 {
+  background-image: url(../images/fruits/lime.jpg);
+}
+.image-7 {
+  background-image: url(../images/fruits/mango.jpg);
+}
+.image-8 {
+  background-image: url(../images/fruits/melon.jpg);
+}
+.image-9 {
+  background-image: url(../images/fruits/orange.jpg);
+}
+.image-10 {
+  background-image: url(../images/fruits/peach.jpg);
+}
+.image-11 {
+  background-image: url(../images/fruits/pear.jpg);
+}
+.image-12 {
+  background-image: url(../images/fruits/pinapple.jpg);
+}
+.image-13 {
+  background-image: url(../images/fruits/plum.jpg);
+}
+.image-14 {
+  background-image: url(../images/fruits/raspberry.jpg);
+}
+.image-15 {
+  background-image: url(../images/fruits/strawberry.jpg);
 }
